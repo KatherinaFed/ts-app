@@ -1,11 +1,14 @@
 import React from 'react';
 import Calendar from '../Calendar/Calendar';
-import Day from '../Calendar/Day';
+import CalendarDay from '../Calendar/CalendarDay/CalendarDay';
+import CalendarHeader from '../Calendar/CalendarHeader/CalendarHeader';
 
 const Running = () => {
   return (
-    <div>
-      <Day />
+    <div className='running'>
+      {/* <CalendarHeader /> */}
+      {/* <CalendarDay /> */}
+      <Calendar />
     </div>
   );
 };
