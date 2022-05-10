@@ -1,6 +1,9 @@
 import { Container, ListItemButton, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-// import * as runningIcon from '../assets/running.png'
+import { FaRunning, FaSwimmingPool } from 'react-icons/fa';
+import { BiCycling } from 'react-icons/bi';
+import { GiMountainClimbing, GiBoxingGlove } from 'react-icons/gi';
+import { GrYoga } from 'react-icons/gr';
 
 const Sidebar = () => {
   return (
@@ -25,7 +28,10 @@ const Sidebar = () => {
               color: '#000',
             }}
           >
-            <Typography style={{ fontWeight: 500, fontSize: '20px' }}>
+            <FaRunning />
+            <Typography
+              style={{ fontWeight: 500, fontSize: '20px', marginLeft: '10px' }}
+            >
               Running
             </Typography>
           </ListItemButton>
@@ -39,7 +45,10 @@ const Sidebar = () => {
               color: '#000',
             }}
           >
-            <Typography style={{ fontWeight: 500, fontSize: '20px' }}>
+            <BiCycling />
+            <Typography
+              style={{ fontWeight: 500, fontSize: '20px', marginLeft: '10px' }}
+            >
               Cycling
             </Typography>
           </ListItemButton>
@@ -53,7 +62,10 @@ const Sidebar = () => {
               color: '#000',
             }}
           >
-            <Typography style={{ fontWeight: 500, fontSize: '20px' }}>
+            <FaSwimmingPool />
+            <Typography
+              style={{ fontWeight: 500, fontSize: '20px', marginLeft: '10px' }}
+            >
               Swimming
             </Typography>
           </ListItemButton>
@@ -67,22 +79,11 @@ const Sidebar = () => {
               color: '#000',
             }}
           >
-            <Typography style={{ fontWeight: 500, fontSize: '20px' }}>
+            <GiMountainClimbing />
+            <Typography
+              style={{ fontWeight: 500, fontSize: '20px', marginLeft: '10px' }}
+            >
               Climbing
-            </Typography>
-          </ListItemButton>
-        </NavLink>
-        <NavLink to="/yoga" style={{ textDecoration: 'none' }}>
-          <ListItemButton
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              height: '60px',
-              color: '#000',
-            }}
-          >
-            <Typography style={{ fontWeight: 500, fontSize: '20px' }}>
-              Yoga
             </Typography>
           </ListItemButton>
         </NavLink>
@@ -95,8 +96,33 @@ const Sidebar = () => {
               color: '#000',
             }}
           >
-            <Typography style={{ fontWeight: 500, fontSize: '20px', alignItems: 'center' }}>
+            <GiBoxingGlove />
+            <Typography
+              style={{
+                fontWeight: 500,
+                fontSize: '20px',
+                alignItems: 'center',
+                marginLeft: '10px',
+              }}
+            >
               Boxing
+            </Typography>
+          </ListItemButton>
+        </NavLink>
+        <NavLink to="/yoga" style={{ textDecoration: 'none' }}>
+          <ListItemButton
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              height: '60px',
+              color: '#000',
+            }}
+          >
+            <GrYoga />
+            <Typography
+              style={{ fontWeight: 500, fontSize: '20px', marginLeft: '10px' }}
+            >
+              Yoga
             </Typography>
           </ListItemButton>
         </NavLink>
