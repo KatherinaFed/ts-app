@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import eventSlice from '../../store/event/eventSlice';
+import { useAppDispatch, useAppSelector } from '../../store/store';
 
 const Boxing = () => {
   return (
-    <div>Boxing</div>
-  )
-}
+    <div>
+      BOXING
+    </div>
+  );
+};
 
-export default Boxing
+export default Boxing;

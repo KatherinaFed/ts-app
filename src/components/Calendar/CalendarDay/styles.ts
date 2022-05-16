@@ -7,10 +7,12 @@ interface DayContainerProps {
 export const DayContainer = styled.div<DayContainerProps>`
   display: flex;
   flex-direction: column;
+  border-radius: 1rem;
   border-width: ${({ isCurrentDay }) => (isCurrentDay ? '3px' : '1px')};
   border-style: solid;
   border-color: ${({ isCurrentDay }) =>
-    isCurrentDay ? 'rgb(125 211 252)' : 'rgb(209 213 219)'};
+    isCurrentDay ? 'rgb(234 88 12)' : 'rgb(209 213 219)'};
+  box-shadow: 0px 0px 10px 0px rgb(209 213 219);
 
   .header {
     display: flex;
