@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
 export const Container = styled.div`
   display: flex;
   flex: 1;
-  box-shadow: 0 2px 4px #bae6fd;
+  border-radius: 1rem;
 `;
 
 export const HeaderContainer = styled.div`

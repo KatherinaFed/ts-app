@@ -10,6 +10,8 @@ import Swimming from './components/Activities/Swimming';
 import Climbing from './components/Activities/Climbing';
 import Yoga from './components/Activities/Yoga';
 import Boxing from './components/Activities/Boxing';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
   return (
@@ -39,7 +41,9 @@ function App() {
 export const RunApp = () => {
   return (
     <BrowserRouter>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   );
 };

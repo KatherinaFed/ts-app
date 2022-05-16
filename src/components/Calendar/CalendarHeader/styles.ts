@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
+interface WeekProps {
+  isSunday: boolean;
+}
+
 export const HeaderContainer = styled.header`
   grid-column: 1 / 8;
   background: white;
   margin: 1rem 3.2rem 0 3.2rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 4px #bae6fd;
-  
+  box-shadow: 0px 0px 10px 3px rgb(209 213 219);
 
   .date-container {
     display: flex;
@@ -39,11 +42,19 @@ export const HeaderContainer = styled.header`
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     border-top: 1px solid rgb(209 213 219);
-    height: 3rem
+    height: 3rem;
   }
 
   .week-day {
     margin: auto;
     padding: 0.25rem;
+    font-weight: 500;
   }
+`;
+
+export const WeekDayContainer = styled.div<WeekProps>`
+  margin: auto;
+  padding: 0.25rem;
+  font-weight: 500;
+  color: ${({ isSunday }) => (isSunday ? 'red' : 'black')};
 `;

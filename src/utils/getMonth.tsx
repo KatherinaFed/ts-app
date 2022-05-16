@@ -13,6 +13,6 @@ export const getMonth = (month: number = dayjs().month()) => {
       return dayjs(new Date(year, month, currentMonthCount));
     });
   });
-  
+
   return daysMatrix;
 };
