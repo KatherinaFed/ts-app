@@ -2,6 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 type EventItem = {
   id: number;
+  name: string;
+  time: number;
   day: number;
   title: string;
   description: string;

@@ -1,9 +1,12 @@
-import React from 'react'
+import dayjs from 'dayjs';
+import React from 'react';
 
 const Cycling = () => {
   return (
-    <div>Cycling</div>
-  )
-}
+    <div>
+      
+    </div>
+  );
+};
 
-export default Cycling
+export default Cycling;

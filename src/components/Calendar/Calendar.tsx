@@ -5,11 +5,13 @@ import CalendarHeader from './CalendarHeader/CalendarHeader';
 import CalendarMonth from './CalendarMonth/CalendarMonth';
 import { Container, MainContainer } from './styles';
 import EventModal from '../Modal/EventModal';
+import TestModalUser from '../Modal/TestModal';
 
 const Calendar = () => {
   const [currenMonth, setCurrentMonth] = useState<Array<Array<object>>>(
     getMonth()
   );
+  
   const { monthIndex, showEventModal } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -18,7 +20,8 @@ const Calendar = () => {
 
   return (
     <>
-      {showEventModal && <EventModal />}
+      {/* {showEventModal && <EventModal />} */}
+      {showEventModal && <TestModalUser />}
       <CalendarHeader />
       <MainContainer>
         <Container>

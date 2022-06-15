@@ -15,6 +15,7 @@ const CalendarHeader = () => {
 
   return (
     <HeaderContainer>
+      <div className="activity-container">ACTIVITIES</div>
       <div className="date-container">
         <button className="btn-container" onClick={handlePrevMonth}>
           <TiArrowLeftThick />

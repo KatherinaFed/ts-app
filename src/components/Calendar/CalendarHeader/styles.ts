@@ -11,6 +11,15 @@ export const HeaderContainer = styled.header`
   border-radius: 1rem;
   box-shadow: 0px 0px 10px 3px rgb(209 213 219);
 
+  .activity-container {
+    display: flex;
+    height: 5vh;
+    font-weight: 500;
+
+    justify-content: center;
+    align-items: center;
+  }
+
   .date-container {
     display: flex;
     height: 10vh;
