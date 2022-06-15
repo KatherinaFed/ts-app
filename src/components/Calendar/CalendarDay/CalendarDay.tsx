@@ -4,7 +4,7 @@ import { DayContainer } from './styles';
 import GlobalContext from '../../../context/GlobalContext';
 import { useAppSelector } from '../../../store/store';
 
-const CalendarDay = ({ day }: any) => {
+const CalendarDay = ({ day, rowIndex }: any) => {
   const { setDaySelected, setShowEventModal } = useContext(GlobalContext);
   const { events } = useAppSelector((state) => state.event);
 
@@ -13,35 +13,33 @@ const CalendarDay = ({ day }: any) => {
   );
 
   const countOfEvents = () => {
+    const word = eventOfDay.length <= 1 ? 'event' : 'events';
     let result = null;
 
-    if (eventOfDay.length > 3) {
-      result = events
-        .slice(0, 3)
-        .map((evt, i) => <div key={i}>{evt.title}</div>);
-        
+    if (eventOfDay.length === 0) {
+      result = '';
     } else {
-      result = eventOfDay.map((evt, i) => <div key={i}>{evt.title}</div>);
+      result = <p className="events">{`${eventOfDay.length} ${word}`}</p>;
     }
 
     return result;
   };
 
   const isCurrentDay = day.format('DD-MM-YY') === dayjs().format('DD-MM-YY');
+  const isWeekend = rowIndex === 0;
 
   return (
-    <DayContainer isCurrentDay={isCurrentDay}>
+    <DayContainer isCurrentDay={isCurrentDay} index={isWeekend}>
       <header className="header">
         <p className="day">{day.format('DD')}</p>
       </header>
       <div
-        style={{ flex: 1, cursor: 'pointer' }}
+        className="eventWrapper"
         onClick={() => {
           setDaySelected(day);
           setShowEventModal(true);
         }}
       >
-        {<p>{`${eventOfDay.length} events`}</p>}
         {countOfEvents()}
       </div>
     </DayContainer>

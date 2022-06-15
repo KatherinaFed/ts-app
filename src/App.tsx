@@ -12,25 +12,25 @@ import Yoga from './components/Activities/Yoga';
 import Boxing from './components/Activities/Boxing';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import Events from './componentsNew/Events/Events';
+import Friends from './componentsNew/Friends/Friends';
+import AllEvents from './componentsNew/Events/AllEvents/AllEvents';
+import MyEvents from './componentsNew/Events/MyEvents/MyEvents';
 
 function App() {
   return (
     <div className="appBody">
       <Header />
       <Grid container>
-        <Grid item sm={2}>
-          <Sidebar />
-        </Grid>
-        <Grid item sm={10}>
+        <Grid item sm={12}>
+          <Main />
           <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/running" element={<Running />} />
-            <Route path="/cycling" element={<Cycling />} />
-            <Route path="/swimming" element={<Swimming />} />
-            <Route path="/climbing" element={<Climbing />} />
-            <Route path="/boxing" element={<Boxing />} />
-            <Route path="/yoga" element={<Yoga />} />
-            <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Events />} />
+            <Route path="/events" element={<Events />}>
+              <Route path="all-events" element={<AllEvents />} />
+              <Route path="my-events" element={<MyEvents />} />
+            </Route>
+            <Route path="/friends" element={<Friends />} />
           </Routes>
         </Grid>
       </Grid>

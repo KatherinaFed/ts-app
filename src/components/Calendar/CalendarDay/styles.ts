@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface DayContainerProps {
   isCurrentDay: boolean;
+  index: boolean;
 }
 
 export const DayContainer = styled.div<DayContainerProps>`
@@ -13,6 +14,8 @@ export const DayContainer = styled.div<DayContainerProps>`
   border-color: ${({ isCurrentDay }) =>
     isCurrentDay ? 'rgb(234 88 12)' : 'rgb(209 213 219)'};
   box-shadow: 0px 0px 10px 0px rgb(209 213 219);
+  margin: 2px;
+  background-color: ${({ index }) => index && 'rgb(254 242 242)'};
 
   .header {
     display: flex;
@@ -20,16 +23,25 @@ export const DayContainer = styled.div<DayContainerProps>`
     align-items: center;
   }
 
-  .nameOfWeek {
-    margin-top: 0.25rem;
-    font-weight: 400;
-  }
-
   .day {
     padding: 0.25rem;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
-    align-text: center;
-    font-weight: ${({isCurrentDay}) => isCurrentDay ? '500' : '300'};
+    text-align: center;
+    font-weight: ${({ isCurrentDay }) => (isCurrentDay ? '500' : '300')};
+  }
+
+  .eventWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+  }
+
+  .events {
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 50px;
   }
 `;

@@ -7,13 +7,13 @@ type TypeMonth = {
 };
 
 const CalendarMonth = ({ month }: TypeMonth) => {
-
+  // console.log(month)
   return (
     <MonthContainer>
       {month.map((row, i) => (
         <React.Fragment key={i}>
           {row.map((day: object, index: number) => {
-            return <CalendarDay day={day} key={index} rowIndex={i} />;
+            return <CalendarDay key={index} day={day} rowIndex={index} />;
           })}
         </React.Fragment>
       ))}
