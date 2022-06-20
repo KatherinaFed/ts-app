@@ -1,8 +1,12 @@
-import basketballImg from '../../assets/basketball-img.png';
-import swimmingImg from '../../assets/swimming-img.png';
-import tennisImg from '../../assets/tennis-img.png';
-import cyclingImg from '../../assets/cycling-img.png';
-import yogaImg from '../../assets/yoga-img.png';
+import basketballImg from '../../assets/activities/basketball-img.png';
+import swimmingImg from '../../assets/activities/swimming-img.png';
+import tennisImg from '../../assets/activities/tennis-img.png';
+import cyclingImg from '../../assets/activities/cycling-img.png';
+import yogaImg from '../../assets/activities/yoga-img.png';
+import user1 from '../../assets/friends/user1.png';
+import user2 from '../../assets/friends/user2.png';
+import user3 from '../../assets/friends/user3.png';
+import user4 from '../../assets/friends/user4.png';
 
 export type EventT = {
   id: number;
@@ -15,6 +19,14 @@ export type EventT = {
   img: string;
 };
 
+export type FriendT = {
+  id: number;
+  username: string;
+  location: string;
+  img: string;
+  // isFriend: boolean;
+};
+
 export const dummyDataAllEvents: EventT[] = [
   {
     id: 1,
@@ -25,7 +37,6 @@ export const dummyDataAllEvents: EventT[] = [
     location: 'Mauer Park',
     creator: 'Alex',
     img: basketballImg,
-
   },
   {
     id: 2,
@@ -56,7 +67,6 @@ export const dummyDataAllEvents: EventT[] = [
     location: 'Rummelsburg Bucht',
     creator: 'Ekaterina',
     img: cyclingImg,
-    
   },
   {
     id: 5,
@@ -80,7 +90,6 @@ export const dummyDataAllEvents: EventT[] = [
   },
 ];
 
-
 export const dummyDataMyEvents: EventT[] = [
   {
     id: 6,
@@ -91,7 +100,6 @@ export const dummyDataMyEvents: EventT[] = [
     location: 'Rummelsburg Bucht',
     creator: 'Ekaterina',
     img: cyclingImg,
-    
   },
   {
     id: 2,
@@ -102,5 +110,32 @@ export const dummyDataMyEvents: EventT[] = [
     location: 'Stralau',
     creator: 'Sindy',
     img: yogaImg,
+  },
+];
+
+export const friendsData: FriendT[] = [
+  {
+    id: 1,
+    username: 'Alexander',
+    location: 'Berlin',
+    img: user1,
+  },
+  {
+    id: 2,
+    username: 'Sandra',
+    location: '',
+    img: user2,
+  },
+  {
+    id: 3,
+    username: 'Sophia',
+    location: 'Lichtenberg',
+    img: user3,
+  },
+  {
+    id: 4,
+    username: 'John',
+    location: 'Prenzlauer Berg',
+    img: user4,
   },
 ];

@@ -30,7 +30,6 @@ const Events = () => {
           <p className="text">My events</p>
         </NavLink>
       </div>
-      {/* <Filters /> */}
       <Outlet />
     </EventsWrapper>
   );

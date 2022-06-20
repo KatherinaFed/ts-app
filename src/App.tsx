@@ -1,15 +1,8 @@
 import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/LoginPage/Login';
-import Header from './components/Header/Header';
+import Header from './componentsNew/Header/Header';
 import { Grid } from '@mui/material';
-import Sidebar from './components/Sidebar/Sidebar';
 import Main from './pages/MainPage/Main';
-import Running from './components/Activities/Running';
-import Cycling from './components/Activities/Cycling';
-import Swimming from './components/Activities/Swimming';
-import Climbing from './components/Activities/Climbing';
-import Yoga from './components/Activities/Yoga';
-import Boxing from './components/Activities/Boxing';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import Events from './componentsNew/Events/Events';
