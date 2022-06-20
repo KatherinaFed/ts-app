@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Events from '../../componentsNew/Events/Events';
 import ProfileItem from '../../componentsNew/Profile/ProfileItem';
 import { palette } from '../../models/palette';
 import { ProfileWrapper } from './styles';
@@ -16,27 +17,30 @@ const Main = () => {
   };
 
   return (
-    <ProfileWrapper>
-      <div className="profile-item">
-        <ProfileItem />
-      </div>
-      <div className="navlinks">
-        <NavLink
-          to="/events"
-          style={({ isActive }) => (isActive ? activeClass : inactiveClass)}
-          className="navlink"
-        >
-          <p className="text">Events</p>
-        </NavLink>
-        <NavLink
-          to="/friends"
-          style={({ isActive }) => (isActive ? activeClass : inactiveClass)}
-          className="navlink"
-        >
-          <p className="text">Friends</p>
-        </NavLink>
-      </div>
-    </ProfileWrapper>
+    <>
+      <ProfileWrapper>
+        <div className="profile-item">
+          <ProfileItem />
+        </div>
+        <div className="navlinks">
+          <NavLink
+            to="/events"
+            style={({ isActive }) => (isActive ? activeClass : inactiveClass)}
+            className="navlink"
+          >
+            <p className="text">Events</p>
+          </NavLink>
+          <NavLink
+            to="/friends"
+            style={({ isActive }) => (isActive ? activeClass : inactiveClass)}
+            className="navlink"
+          >
+            <p className="text">Friends</p>
+          </NavLink>
+        </div>
+      </ProfileWrapper>
+      {/* <Events /> */}
+    </>
   );
 };
 

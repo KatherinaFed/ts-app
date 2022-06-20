@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FiltersWrapper = styled.div`
   display: grid;
-  grid-template-columns: 100px 120px 120px auto 100px 150px 150px 150px;
+  grid-template-columns: 100px 120px 120px auto 100px repeat(3, 150px);
   margin: 1rem;
 
   .day-filter {
